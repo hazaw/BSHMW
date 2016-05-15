@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+
+	<h2>Autorzy</h2>
+
+	<h:panelGrid columns="5">
+		<p:panel id="autorsPanel" header="Autor" style="width=100px">
+			<p:dataTable var="author" value="#{tableBean.authors}">
+				<p:column>
+					<p:panelGrid>
+						<h:outputText value="#{author.toString()}" />
+					</p:panelGrid>
+				</p:column>
+			</p:dataTable>
+		</p:panel>
+
+		<p:panel id="techPanel" header="Techniczne" style="width:300px">
+			<p:dataTable var="tech" value="#{tableBean.tech}">
+				<p:column>
+					<p:panelGrid>
+						<h:outputText value="#{tech}" />
+					</p:panelGrid>
+				</p:column>
+			</p:dataTable>
+		</p:panel>
+
+		<p:panel id="obyPanel" header="Obyczajowe" style="width:300px">
+			<p:dataTable var="oby" value="#{tableBean.oby}">
+				<p:column>
+					<p:panelGrid>
+						<h:outputText value="#{oby}" />
+					</p:panelGrid>
+				</p:column>
+			</p:dataTable>
+		</p:panel>
+
+		<p:panel id="scifiPanel" header="Science Fiction" style="width:300px">
+			<p:dataTable var="scifi" value="#{tableBean.scifi}">
+				<p:column>
+					<p:panelGrid>
+						<h:outputText value="#{scifi}" />
+					</p:panelGrid>
+				</p:column>
+			</p:dataTable>
+		</p:panel>
+
+		<p:panel id="klasPanel" header="Klasyka" style="width:300px">
+			<p:dataTable var="klas" value="#{tableBean.clas}">
+				<p:column>
+					<p:panelGrid>
+						<h:outputText value="#{klas}" />
+					</p:panelGrid>
+				</p:column>
+			</p:dataTable>
+		</p:panel>
+
+	</h:panelGrid>
+
+</h:body>
+</html>
